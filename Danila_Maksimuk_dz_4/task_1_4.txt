@@ -1,0 +1,55 @@
+1.Установлен ли пакет pillow в глобальном окружении?
+C:\Users\user>pip list
+Package    Version
+---------- -------
+Pillow     9.0.0
+pip        21.2.4
+setuptools 58.1.0
+WARNING: You are using pip version 21.2.4; however, version 22.0.2 is available.
+You should consider upgrading via the 'C:\pyhon3\python.exe -m pip install --upgrade pip' command.
+2. Устанавливаю самую свежую версию pip
+C:\Users\user>python -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\pyhon3\lib\site-packages (21.2.4)
+Collecting pip
+  Downloading pip-22.0.2-py3-none-any.whl (2.1 MB)
+     |████████████████████████████████| 2.1 MB 2.2 MB/s
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 21.2.4
+    Uninstalling pip-21.2.4:
+      Successfully uninstalled pip-21.2.4
+Successfully installed pip-22.0.2
+3.Создано виртуальное окружение, пакета pillow не установлено
+C:\Users\user\petry>virtualenv my_virt
+created virtual environment CPython3.10.1.final.0-64 in 3401ms
+  creator CPython3Windows(dest=C:\Users\user\petry\my_virt, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=C:\Users\user\AppData\Local\pypa\virtualenv)
+    added seed packages: pip==21.3.1, setuptools==60.2.0, wheel==0.37.1
+  activators BashActivator,BatchActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+
+Активация
+C:\Users\user\petry\my_virt> .\Scripts\activate
+
+(my_virt) C:\Users\user\petry\my_virt>
+
+Пакет pilow не установлен
+(my_virt) C:\Users\user\petry\my_virt>pip list
+Package    Version
+---------- -------
+pip        21.3.1
+setuptools 60.2.0
+wheel      0.37.1
+WARNING: You are using pip version 21.3.1; however, version 22.0.2 is available.
+You should consider upgrading via the 'C:\Users\user\petry\my_virt\Scripts\python.exe -m pip install --upgrade pip' command.
+
+5.Установка в виртуальное окружение пакета Pillow
+(my_virt) C:\Users\user\petry\my_virt> pip install pillow
+Collecting pillow
+  Using cached Pillow-9.0.0-cp310-cp310-win_amd64.whl (3.2 MB)
+Installing collected packages: pillow
+Successfully installed pillow-9.0.0
+WARNING: You are using pip version 21.3.1; however, version 22.0.2 is available.
+You should consider upgrading via the 'C:\Users\user\petry\my_virt\Scripts\python.exe -m pip install --upgrade pip' command.
+6.Деактивация виртуального окружения
+(my_virt) C:\Users\user\petry\my_virt>deactivate
+C:\Users\user\petry\my_virt>
